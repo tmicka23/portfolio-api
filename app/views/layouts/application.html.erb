@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>PortfolioApi</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+</head>
 
-  <body>
-   <div class="container">
-    <%= yield %>
-   </div>
-    
-  </body>
+<body>
+    <div class="container">
+        <% if notice %>
+        <div class="alert alert-success"><%= notice %></div>
+        <% elsif alert %>
+        <div class="alert alert-danger"><%= alert %></div>
+        <% end %>
+
+        <%= yield %>
+    </div>
+
+</body>
+
 </html>
