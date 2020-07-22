@@ -1,38 +1,45 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @project.name %>
+    <strong>Name:</strong>
+    <%= @project.name %>
 </p>
 
 <p>
-  <strong>Date:</strong>
-  <%= @project.date %>
+    <strong>Date:</strong>
+    <%= @project.date %>
 </p>
 
 <p>
-  <strong>Image:</strong>
-  <%= @project.image %>
+    <strong>Image:</strong>
+    <%= @project.image %>
 </p>
 
 <p>
-  <strong>Repository:</strong>
-  <%= @project.repository %>
+    <strong>Repository:</strong>
+    <%= @project.repository %>
 </p>
 
 <p>
-  <strong>Link:</strong>
-  <%= @project.link %>
+    <strong>Link:</strong>
+    <%= @project.link %>
 </p>
 
 <p>
-  <strong>Client:</strong>
-  <%= @project.client %>
+    <strong>Client:</strong>
+    <%= @project.client %>
 </p>
 
 <p>
-  <strong>Content:</strong>
-  <%= @project.content %>
+    <strong>Content:</strong>
+    <%= @project.content %>
+</p>
+
+<p>
+    <strong>Tags:</strong>
+    <% @project.tags.each do |t| %>
+    <span><%= t.name %></span>
+    <% end %>
 </p>
 
 <%= link_to 'Edit', edit_project_path(@project) %> |

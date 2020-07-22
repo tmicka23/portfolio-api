@@ -1,22 +1,22 @@
 <%= form_with(model: tag, local: true) do |form| %>
-  <% if tag.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(tag.errors.count, "error") %> prohibited this tag from being saved:</h2>
+<% if tag.errors.any? %>
+<div id="error_explanation">
+    <h2><%= pluralize(tag.errors.count, "error") %> prohibited this tag from being saved:</h2>
 
-      <ul>
+    <ul>
         <% tag.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
+        <li><%= message %></li>
         <% end %>
-      </ul>
-    </div>
-  <% end %>
+    </ul>
+</div>
+<% end %>
 
-  <div class="field">
+<div class="form-group">
     <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
+    <%= form.text_field :name, class: 'form-control' %>
+</div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+<div class="actions">
+    <%= form.submit class: "btn btn-primary" %>
+</div>
 <% end %>
