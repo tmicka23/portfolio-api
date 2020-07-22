@@ -10,6 +10,10 @@ module PortfolioApi
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
+    config.action_dispatch.default_headers = {
+      'Access-Control-Allow-Origin' =>  %w{'http://localhost:3000', 'https://mt-portfolio.netlify.app'}.join(","),
+      'Access-Control-Request-Method' => %w{GET POST PUT PATCH DELETE}.join(",")
+    }
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers

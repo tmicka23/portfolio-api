@@ -48,7 +48,7 @@
 
 <div class="form-group">
     <%= form.label :tags %>
-    <%= collection_select(:project, :tag_ids, Tag.all, :id, :name, { :multiple => true, class: "custom-select" } )%>
+    <%= collection_select(:project, :tag_ids, Tag.all, :id, :name, {} , { :multiple => true, class: "custom-select" } )%>
 </div>
 
 
