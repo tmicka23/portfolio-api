@@ -21,7 +21,7 @@
         <tr>
             <td><%= project.name %></td>
             <td><%= project.date %></td>
-            <td><%= project.image_url %></td>
+            <td><% if project.image_url %><%= project.image_url %><% end %></td>
             <td><%= project.repository %></td>
             <td><%= project.link %></td>
             <td><%= project.client %></td>

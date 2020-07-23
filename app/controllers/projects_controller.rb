@@ -6,11 +6,19 @@ class ProjectsController < ApplicationController
   # GET /projects.json
   def index
     @projects = Project.all
+    respond_to do |format|
+      format.html {render :index}
+      format.json {render json: @projects, include: :tags}
+    end
   end
 
   # GET /projects/1
   # GET /projects/1.json
   def show
+    respond_to do |format|
+      format.html {render :show}
+      format.json {render json: @project.to_json(include: {tags: {} })}
+    end
   end
 
   # GET /projects/new
