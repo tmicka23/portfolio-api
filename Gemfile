@@ -35,7 +35,6 @@ gem 'bootstrap', '~> 4.5.0'
 gem 'devise'
 
 gem 'carrierwave', '~> 2.0'
-gem 'cloudinary'
 
 
 group :development, :test do
@@ -58,6 +57,11 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+end
+
+group :production do
+
+  gem 'cloudinary'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
