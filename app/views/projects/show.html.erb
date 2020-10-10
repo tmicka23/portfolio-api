@@ -13,7 +13,7 @@
 <p>
     <strong>Image:</strong>
     <% if @project.image? %>
-    <img src="<%= @project.image_url %>">
+    <%= img_tag @project.image_url %>
     <% end %>
 </p>
 
